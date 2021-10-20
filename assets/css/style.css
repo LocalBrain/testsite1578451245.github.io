@@ -1,0 +1,323 @@
+/* *************************************************************************************************************************
+
+1 - Fonts
+2 - Settings
+3 - Header
+4 - Nav-Bar
+5 - Section
+6 - Contact
+7 - Footer
+8 - Copyright
+9 - Nos travaux
+10 - Media-Queries
+
+************************************************************************************************************************* 
+
+************************************************************************************************************************* */
+
+/* 1 - FONTS 
+************************************************************************************************************************* */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Ubuntu:wght@300&display=swap');
+
+@font-face {
+    font-family: "principal-font";
+    src: url(/assets/fonts/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: "title-font";
+    src: url(/assets/fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+    font-family: "maj-font";
+    src: url(/assets/fonts/BebasNeue-Regular.ttf);
+}
+
+/* 2 - SETTINGS 
+************************************************************************************************************************* */
+:root {
+    --black-color: #212121;
+    --white-color: #fff;
+    --white1-color: #FFFFFF;
+    --title-color: #A8A6A1;
+    --title1-color: #444444;
+    --title2-color: #444340;
+    --title3-color: #444444;
+}
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+h2 {
+    padding: 30px;
+}
+
+body {
+    background-color: var(--black-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
+li:active {
+    transform: scale(0.9);
+}
+
+#container {
+    width: 1024px;
+    min-height: 100%;
+    background-color: var(--white-color);
+    margin: auto;
+}
+
+.line {
+    border-top: 1px solid var(--title2-color);
+    width: 80%;
+    margin: 30px auto;
+}
+
+/* 3 - HEADER 
+************************************************************************************************************************* */
+header img {
+    width: 50%;
+    height: 250px;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+}
+
+header h1 {
+    text-align: center;
+    font-family: "title-font", 'Lobster', cursive;
+    color: var(--title1-color);
+    font-size: 2.5rem;
+    padding: 10px;
+}
+
+header h2 {
+    text-align: center;
+    padding: 10px;
+    font-family: "principal-font", 'Ubuntu', sans-serif;
+    color: var(--title-color);
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+/* 4 - NAVBAR 
+************************************************************************************************************************* */
+nav {
+    background: linear-gradient(90deg, rgba(33, 33, 33, 1) 0%, rgba(33, 33, 33, 1) 35%, rgba(51, 51, 51, 1) 50%, rgba(33, 33, 33, 1) 65%, rgba(33, 33, 33, 1) 100%);
+    opacity: 0.9;
+    text-align: center;
+    padding: 18px 18px;
+}
+
+
+ul li {
+    list-style-type: none;
+    padding: 8px 18px;
+    display: inline-block;
+    justify-content: center;
+    font-family: "principal-font", 'Ubuntu', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+/* 5 - SECTION  
+************************************************************************************************************************* */
+#home h2 {
+    font-family: "title-font", 'Lobster', cursive;
+    font-size: 3rem;
+    margin-left: 50px;
+    color: var(--title1-color)
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+}
+
+section div {
+    display: inline-block;
+    justify-content: space-around;
+    width: 33%;
+    height: 600px;
+}
+
+section img {
+    width: 327px;
+    margin: auto;
+}
+
+section h2 {
+    font-family: "title-font", 'Lobster', cursive;
+    font-size: 1.8rem;
+    text-align: left;
+    color: var(--title2-color);
+    font-weight: 400;
+}
+
+section p {
+    font-family: "principal-font", 'Ubuntu', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+    padding: 5px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 6 - CONTACT 
+************************************************************************************************************************* */
+#contact img {
+    display: block;
+    margin: auto;
+}
+
+#contact h3 {
+    font-family: "title-font", 'Lobster', cursive;
+    font-size: 2.5rem;
+    color: var(--title2-color);
+    text-align: center;
+}
+
+/* 7 - FOOTER
+************************************************************************************************************************* */
+footer p,
+footer a {
+    text-align: center;
+    font-family: "maj-font", 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--black-color);
+}
+
+footer p a {
+    text-decoration: underline;
+}
+
+#arrow-up img {
+    width: 5%;
+    animation: anim 3s infinite alternate ease-in-out;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/* 8 - COPYRIGHT 
+************************************************************************************************************************* */
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(to right, #212121 0%, #333333 50%, #212121 100%);
+    color: var(--white1-color);
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    border-top-width: 2px;
+    font-family: "principal-font", 'Ubuntu', sans-serif;
+}
+
+/* 9 - NOS TRAVAUX 
+************************************************************************************************************************* */
+#nostravaux {
+    font-family: "title-font", 'Lobster', cursive;
+    font-size: 3rem;
+    margin-left: 90px;
+    color: var(--title1-color);
+}
+
+#target {
+    display: flex;
+    width: 300px;
+    text-align: left;
+    animation: color 30s alternate infinite;
+    perspective: 200px;
+    transform: translateX(26px);
+    text-align: center;
+    font-family: "principal-font", 'Ubuntu', sans-serif;
+    color: #A8A6A1;
+    font-size: 2rem;
+    margin-bottom: 69px;
+    padding-bottom: 20px;
+}
+
+.contenu {
+    height: 1300px;
+    width: 99%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    background: var(--white-color);
+    padding-top: 50px;
+    text-align: center;
+}
+
+.div2 {
+    height: 433px;
+    margin: auto;
+}
+
+.img-size {
+    height: 200px;
+    width: 230px;
+    margin: auto;
+}
+
+.contenu p {
+    font-family: "principal-font", 'Ubuntu', sans-serif;
+    width: 300px;
+    margin: auto;
+}
+
+.contenu h4 {
+    padding: 20px;
+    font-size: 1.6rem;
+    font-family: "title-font", 'Lobster', cursive;
+}
+
+.letter {
+    transform: translateZ(200px);
+}
+
+
+/* 10 - MEDIA-QUERIES 
+************************************************************************************************************************* */
+@media screen and (max-width: 700px) {
+    .contenu {
+        display: block;
+        height: 4300px;
+    }
+
+    nav {
+        display: none;
+    }
+}

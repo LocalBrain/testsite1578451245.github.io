@@ -1,0 +1,15 @@
+body {
+    overflow-x: hidden;
+}
+
+.transition-fade {
+    opacity: 1;
+    transition: 0.5s;
+    transform: translateX(0);
+    transform-origin: left;
+}
+
+html.is-animating .transition-fade {
+    opacity: 1;
+    transform: translateX(100%);
+}
